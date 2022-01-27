@@ -1,0 +1,241 @@
+ <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="oval_definitions">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="generator">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="oval:product_name"/>
+                            <xs:element type="xs:string" name="oval:schema_version"/>
+                            <xs:element type="xs:string" name="oval:timestamp">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension></xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="definitions">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="definition">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="metadata">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:string" name="title">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension></xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="reference">
+                                                        <xs:complexType>
+                                                            <xs:sequence></xs:sequence>
+                                                            <xs:attribute name="ref_id" type="xs:string"/>
+                                                            <xs:attribute name="ref_url" type="xs:string"/>
+                                                            <xs:attribute name="source" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element type="xs:string" name="description">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension></xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="criteria">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="criterion">
+                                                        <xs:complexType>
+                                                            <xs:sequence></xs:sequence>
+                                                            <xs:attribute name="test_ref" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="operator" type="xs:string"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="class" type="xs:string"/>
+                                    <xs:attribute name="id" type="xs:string"/>
+                                    <xs:attribute name="version" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="tests">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="registry_test">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="object">
+                                            <xs:complexType>
+                                                <xs:sequence></xs:sequence>
+                                                <xs:attribute name="object_ref" type="xs:string"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="state">
+                                            <xs:complexType>
+                                                <xs:sequence></xs:sequence>
+                                                <xs:attribute name="state_ref" type="xs:string"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="check" type="xs:string"/>
+                                    <xs:attribute name="check_existence" type="xs:string"/>
+                                    <xs:attribute name="comment" type="xs:string"/>
+                                    <xs:attribute name="id" type="xs:string"/>
+                                    <xs:attribute name="version" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="objects">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="registry_object">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:string" name="hive"/>
+                                        <xs:element name="key">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="operation" type="xs:string"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element type="xs:string" name="name"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="comment" type="xs:string"/>
+                                    <xs:attribute name="id" type="xs:string"/>
+                                    <xs:attribute name="version" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="states">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="registry_state">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="comment" type="xs:string"/>
+                                    <xs:attribute name="id" type="xs:string"/>
+                                    <xs:attribute name="version" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="variables">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="external_variable">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="comment" type="xs:string"/>
+                                    <xs:attribute name="datatype" type="xs:string"/>
+                                    <xs:attribute name="id" type="xs:string"/>
+                                    <xs:attribute name="version" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ds:Signature">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ds:SignedInfo">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ds:CanonicalizationMethod">
+                                            <xs:complexType>
+                                                <xs:sequence></xs:sequence>
+                                                <xs:attribute name="Algorithm" type="xs:string"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="ds:SignatureMethod">
+                                            <xs:complexType>
+                                                <xs:sequence></xs:sequence>
+                                                <xs:attribute name="Algorithm" type="xs:string"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="ds:Reference">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="ds:Transforms">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element maxOccurs="unbounded" name="ds:Transform">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence></xs:sequence>
+                                                                        <xs:attribute name="Algorithm" type="xs:string"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="ds:DigestMethod">
+                                                        <xs:complexType>
+                                                            <xs:sequence></xs:sequence>
+                                                            <xs:attribute name="Algorithm" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element type="xs:string" name="ds:DigestValue"/>
+                                                </xs:sequence>
+                                                <xs:attribute name="URI" type="xs:string"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element type="xs:string" name="ds:SignatureValue"/>
+                            <xs:element name="ds:KeyInfo">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ds:X509Data">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:string" name="ds:X509Certificate"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="ds:KeyValue">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="ds:RSAKeyValue">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element type="xs:string" name="ds:Modulus"/>
+                                                                <xs:element type="xs:string" name="ds:Exponent"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-stream-collection xmlns="http://scap.nist.gov/schema/scap/source/1.2" id="scap_mil.disa.stig_collection_U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark" schematron-version="1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://checklists.nist.gov/xccdf/1.2 http://scap.nist.gov/schema/xccdf/1.2/xccdf_1.2.xsd http://cpe.mitre.org/dictionary/2.0 http://scap.nist.gov/schema/cpe/2.3/cpe-dictionary_2.3.xsd http://oval.mitre.org/XMLSchema/oval-common-5 http://oval.mitre.org/language/download/schema/version5.10.1/ovaldefinition/complete/oval-common-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5 http://oval.mitre.org/language/download/schema/version5.10.1/ovaldefinition/complete/oval-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#independent http://oval.mitre.org/language/download/schema/version5.10.1/ovaldefinition/complete/independent-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#windows http://oval.mitre.org/language/download/schema/version5.10.1/ovaldefinition/complete/windows-definitions-schema.xsd http://scap.nist.gov/schema/scap/source/1.2 http://scap.nist.gov/schema/scap/1.2/scap-source-data-stream_1.2.xsd">
+  <data-stream id="scap_mil.disa.stig_datastream_U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark" use-case="CONFIGURATION" scap-version="1.2" timestamp="2021-03-18T15:56:26">
+    <dictionaries>
+      <component-ref id="scap_mil.disa.stig_cref_U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark-cpe-dictionary.xml" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#scap_mil.disa.stig_comp_U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark-cpe-dictionary.xml">
+        <cat:catalog xmlns:cat="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+          <cat:uri name="U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark-cpe-oval.xml" uri="#scap_mil.disa.stig_cref_U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark-cpe-oval.xml" />
+        </cat:catalog>
+      </component-ref>
+    </dictionaries>
+    <checklists>
+      <component-ref id="scap_mil.disa.stig_cref_U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark-xccdf.xml" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#scap_mil.disa.stig_comp_U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark-xccdf.xml">
+        <cat:catalog xmlns:cat="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+          <cat:uri name="U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" uri="#scap_mil.disa.stig_cref_U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+        </cat:catalog>
+      </component-ref>
+    </checklists>
+    <checks>
+      <component-ref id="scap_mil.disa.stig_cref_U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#scap_mil.disa.stig_comp_U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+      <component-ref id="scap_mil.disa.stig_cref_U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark-cpe-oval.xml" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#scap_mil.disa.stig_comp_U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark-cpe-oval.xml" />
+    </checks>
+  </data-stream>
+  <component id="scap_mil.disa.stig_comp_U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark-cpe-dictionary.xml" timestamp="2021-03-18T15:56:26">
+    <cpe-list xmlns="http://cpe.mitre.org/dictionary/2.0">
+      <cpe-item name="cpe:/o:microsoft:windows_10">
+        <title>Microsoft Windows 10</title>
+        <check system="http://oval.mitre.org/XMLSchema/oval-definitions-5" href="U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark-cpe-oval.xml">oval:mil.disa.stig.windows:def:1</check>
+      </cpe-item>
+    </cpe-list>
+  </component>
+  <component id="scap_mil.disa.stig_comp_U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark-xccdf.xml" timestamp="2021-03-18T15:56:26">
+    <xccdf:Benchmark xmlns:xccdf="http://checklists.nist.gov/xccdf/1.2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cpe="http://cpe.mitre.org/language/2.0" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" id="xccdf_mil.disa.stig_benchmark_Windows_10_STIG" xml:lang="en" style="SCAP_1.2">
+      <xccdf:status date="2021-03-10">accepted</xccdf:status>
+      <xccdf:title>Windows 10 Security Technical Implementation Guide</xccdf:title>
+      <xccdf:description>This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DoD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.</xccdf:description>
+      <xccdf:notice id="terms-of-use" xml:lang="en" />
+      <xccdf:front-matter xml:lang="en" />
+      <xccdf:rear-matter xml:lang="en" />
+      <xccdf:reference href="https://cyber.mil">
+        <dc:publisher>DISA</dc:publisher>
+        <dc:source>STIG.DOD.MIL</dc:source>
+      </xccdf:reference>
+      <xccdf:plain-text id="release-info">Release: 2.2 Benchmark Date: 04 May 2021</xccdf:plain-text>
+      <xccdf:plain-text id="generator">3.2.2.36079</xccdf:plain-text>
+      <xccdf:plain-text id="conventionsVersion">1.10.0</xccdf:plain-text>
+      <xccdf:platform idref="cpe:/o:microsoft:windows_10" />
+      <xccdf:version update="http://iase.disa.mil/stigs">002.002</xccdf:version>
+      <xccdf:metadata>
+        <dc:creator>DISA</dc:creator>
+        <dc:publisher>DISA</dc:publisher>
+        <dc:contributor>DISA</dc:contributor>
+        <dc:source>STIG.DOD.MIL</dc:source>
+      </xccdf:metadata>
+      <xccdf:Profile id="xccdf_mil.disa.stig_profile_MAC-1_Classified">
+        <xccdf:title>I - Mission Critical Classified</xccdf:title>
+        <xccdf:description>&lt;ProfileDescription&gt;&lt;/ProfileDescription&gt;</xccdf:description>
+        <xccdf:select idref="xccdf_mil.disa.stig_group_V-220908" selected="true" />
+        
+      </xccdf:Profile>
+	   <xccdf:Value id="xccdf_mil.disa.stig_value_admin_account_status_var" type="boolean" operator="equals">
+        <xccdf:title>Status of Admin Account</xccdf:title>
+        <xccdf:description>This value defines the desired status of the built-in Account account. 0 = disabled; 1 = enabled.</xccdf:description>
+        <xccdf:value>0</xccdf:value>
+        <xccdf:value selector="disabled">0</xccdf:value>
+        <xccdf:value selector="enabled">1</xccdf:value>
+      </xccdf:Value>
+
+ <xccdf:Group id="xccdf_mil.disa.stig_group_V-220908">
+        <xccdf:title>SRG-OS-000104-GPOS-00051</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-220908r569187_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN10-SO-000005</xccdf:version>
+          <xccdf:title>The built-in administrator account must be disabled.</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;The built-in administrator account is a well-known account subject to attack.  It also provides no accountability to individual administrators on a system.  It must be disabled to prevent its use.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Windows 10</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Windows 10</dc:subject>
+            <dc:identifier>4072</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cce.mitre.org">CCE-43470-4</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-78091</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">V-63601</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-000764</xccdf:ident>
+          <xccdf:fixtext fixref="F-22612r555210_fix">Configure the policy value for Computer Configuration &gt;&gt; Windows Settings &gt;&gt; Security Settings &gt;&gt; Local Policies &gt;&gt; Security Options &gt;&gt; "Accounts: Administrator account status" to "Disabled".</xccdf:fixtext>
+          <xccdf:fix id="F-22612r555210_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-export value-id="xccdf_mil.disa.stig_value_admin_account_status_var" export-name="oval:mil.disa.stig.windows:var:12900" />
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:129" href="U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+      
+      </xccdf:Benchmark>
+  </component>
+  <component id="scap_mil.disa.stig_comp_U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" timestamp="2021-03-18T15:56:26">
+    <oval_definitions xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" xmlns:oval="http://oval.mitre.org/XMLSchema/oval-common-5">
+      <generator>
+        <oval:product_name>repotool</oval:product_name>
+        <oval:schema_version>5.10</oval:schema_version>
+        <oval:timestamp>2021-03-18T15:56:25</oval:timestamp>
+      </generator>
+	  <definitions>
+      <definition id="oval:mil.disa.stig.windows:def:129" version="1" class="compliance">
+	<metadata>
+		<title>Built-in Admin Account Status</title>
+		<affected family="windows">
+			<platform>Microsoft Windows 10</platform>
+		</affected>
+		<description>The built-in administrator account must be disabled.</description>
+		<reference source="http://cce.mitre.org" ref_id="CCE-43470-4"/>
+	</metadata>
+	<criteria operator="AND">
+		<criterion test_ref="oval:mil.disa.stig.windows:tst:12900" comment="Verifies 'Accounts: Administrator account status' is set to 'Disabled'"/>
+	</criteria>
+</definition>
+  </definitions>
+  <tests>
+  <user_sid55_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.windows:tst:12900" version="2" comment="'Accounts: Administrator account status' is set to 'Disabled'" check="at least one">
+	<object object_ref="oval:mil.disa.stig.windows:obj:12900"/>
+	<state state_ref="oval:mil.disa.stig.windows:ste:12900"/>
+</user_sid55_test>
+  </tests>
+  <states>
+    <user_sid55_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.windows:ste:12900" version="1" comment="Enabled equals variable">
+	<enabled datatype="boolean" var_ref="oval:mil.disa.stig.windows:var:12900"/>
+</user_sid55_state>
+  </states>
+  <objects>
+  <wmi57_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.windows:obj:12901" version="4" comment="Local Built-in Administrator">
+	<namespace datatype="string">root\cimv2</namespace>
+	<wql datatype="string" operation="equals">SELECT SID FROM Win32_UserAccount WHERE LocalAccount=True AND SID LIKE 'S-1-5-21-%-500'</wql>
+</wmi57_object>
+     <user_sid55_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.windows:obj:12900" version="2" comment="Built-in Administrator account">
+	<user_sid var_ref="oval:mil.disa.stig.windows:var:12901" datatype="string"/>
+</user_sid55_object>
+  </objects>
+     <variables>
+	 <local_variable id="oval:mil.disa.stig.windows:var:12901" version="3" datatype="string" comment="Built-in Administrator SID">
+	<object_component object_ref="oval:mil.disa.stig.windows:obj:12901" item_field="result" record_field="sid"/>
+</local_variable>
+    <external_variable id="oval:mil.disa.stig.windows:var:12900" version="3" datatype="boolean" comment="Status of Admin Account">
+          <possible_value hint="disabled">0</possible_value>
+          <possible_value hint="enabled">1</possible_value>
+        </external_variable>
+		   </variables>
+	  </oval_definitions>
+  </component>
+  <component id="scap_mil.disa.stig_comp_U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark-cpe-oval.xml" timestamp="2021-03-18T15:56:26">
+    <oval_definitions xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" xmlns:oval="http://oval.mitre.org/XMLSchema/oval-common-5">
+      <generator>
+        <oval:product_name>repotool</oval:product_name>
+        <oval:schema_version>5.10</oval:schema_version>
+        <oval:timestamp>2021-03-18T15:56:25</oval:timestamp>
+      </generator>
+      <definitions>
+        <definition id="oval:mil.disa.stig.windows:def:1" version="1" class="inventory">
+          <metadata>
+            <title>Microsoft Windows 10</title>
+            <affected family="windows">
+              <platform>Microsoft Windows 10</platform>
+              <!-- including Microsoft Windows 8 only for the purpose of allowing SCV 1.2.1.13 validation to pass; it does not recognize Microsoft Windows 10 -->
+              <platform>Microsoft Windows 8</platform>
+            </affected>
+            <reference source="CPE" ref_id="cpe:/o:microsoft:windows_10:-:-:~-~-~-~-~" />
+            <description>Microsoft Windows 10 is the installed operating system</description>
+          </metadata>
+          <criteria operator="AND">
+            <criterion comment="The installed operating system belongs to the Microsoft Windows family" test_ref="oval:mil.disa.stig.windows:tst:100" />
+            <criterion comment="The installed operating system is Microsoft Windows 10" test_ref="oval:mil.disa.stig.windows:tst:101" />
+          </criteria>
+        </definition>
+      </definitions>
+      <tests>
+        <family_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#independent" id="oval:mil.disa.stig.windows:tst:100" version="1" comment="The installed operating system belongs to the Microsoft Windows family" check_existence="at_least_one_exists" check="all">
+          <object object_ref="oval:mil.disa.stig.windows:obj:100" />
+          <state state_ref="oval:mil.disa.stig.windows:ste:100" />
+        </family_test>
+        <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.windows:tst:101" version="1" comment="The installed operating system is Windows 10" check_existence="at_least_one_exists" check="all">
+          <object object_ref="oval:mil.disa.stig.windows:obj:101" />
+          <state state_ref="oval:mil.disa.stig.windows:ste:101" />
+        </registry_test>
+      </tests>
+      <objects>
+        <family_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#independent" id="oval:mil.disa.stig.windows:obj:100" version="1" comment="OS family" />
+        <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.windows:obj:101" version="2" comment="ProductName registry entry">
+          <hive datatype="string">HKEY_LOCAL_MACHINE</hive>
+          <key datatype="string">SOFTWARE\Microsoft\Windows NT\CurrentVersion</key>
+          <name datatype="string">ProductName</name>
+        </registry_object>
+      </objects>
+      <states>
+        <family_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#independent" id="oval:mil.disa.stig.windows:ste:100" version="1" comment="Microsoft Windows family">
+          <family operation="equals">windows</family>
+        </family_state>
+        <registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.windows:ste:101" version="1" comment="Microsoft Windows 10 registry entry state">
+          <value operation="pattern match">^[Ww][Ii][Nn][Dd][Oo][Ww][Ss] 10.*$</value>
+        </registry_state>
+      </states>
+    </oval_definitions>
+  </component>
+</data-stream-collection>
+

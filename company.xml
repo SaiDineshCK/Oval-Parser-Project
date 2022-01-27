@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bs:departmentStore xmlns:bs="http://departmentstore.com/schemes">
+<bs:item id="1">
+<bs:itemname>Kellogs choclate</bs:itemname>
+</bs:item>
+<bs:item id="2">
+<bs:itemname>L'Oreal Shampoo</bs:itemname>
+</bs:item>
+</bs:departmentStore>
